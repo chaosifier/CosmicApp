@@ -13,8 +13,12 @@ namespace Cosmic.ViewModel
         public ICommand OpenBaseQuizCommand { get; set; }
         public ICommand OpenLearnMorePageCommand { get; set; }
         public ICommand OpenTimerPageCommand { get; set; }
+        public string QuoteOfTheDay { get; set; }
+
         public HomePageViewModel()
         {
+            QuoteOfTheDay = DoshaQuestionHelper.GetQuoteOfTheDay();
+
             OpenBaseQuizCommand = new Command(async () =>
             {
                 if (IsBusy)

@@ -2,7 +2,8 @@
 <ContentPage
     x:Class="Cosmic.Views.HomePage"
     xmlns="http://xamarin.com/schemas/2014/forms"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
         <StackLayout
             Margin="15"
@@ -15,12 +16,34 @@
                 HorizontalTextAlignment="Center"
                 Text="Cosmic App"
                 TextColor="#8aa771" />
+
+            <Label
+                Margin="0,0,0,-15"
+                BackgroundColor="White"
+                HorizontalOptions="End"
+                Text="Rasayana of the day" />
+            <Frame
+                Margin="5,5"
+                AbsoluteLayout.LayoutBounds="0,0,1,1"
+                AbsoluteLayout.LayoutFlags="All"
+                BorderColor="Black"
+                CornerRadius="10"
+                HasShadow="True"
+                HorizontalOptions="FillAndExpand">
+                <Label
+                    FontAttributes="Italic"
+                    FontSize="20"
+                    Text="{Binding QuoteOfTheDay}"
+                    TextColor="Green" />
+            </Frame>
+
+
             <Button
                 BackgroundColor="Orange"
                 Command="{Binding OpenBaseQuizCommand}"
                 CornerRadius="10"
                 FontSize="30"
-                HeightRequest="200"
+                HeightRequest="150"
                 HorizontalOptions="FillAndExpand"
                 Text="What is my Dosha?" />
             <Button
@@ -28,7 +51,7 @@
                 Command="{Binding OpenTimerPageCommand}"
                 CornerRadius="10"
                 FontSize="30"
-                HeightRequest="200"
+                HeightRequest="150"
                 HorizontalOptions="FillAndExpand"
                 Text="TM Timer" />
             <Button
@@ -36,7 +59,7 @@
                 Command="{Binding OpenLearnMorePageCommand}"
                 CornerRadius="10"
                 FontSize="30"
-                HeightRequest="200"
+                HeightRequest="150"
                 HorizontalOptions="FillAndExpand"
                 Text="Tips" />
         </StackLayout>

@@ -47,6 +47,29 @@ namespace Cosmic
             return questions;
         }
 
+        public static string GetQuoteOfTheDay()
+        {
+            var quotes = new List<string>()
+            {
+                "Start your day with a positive and calm mindset to tackle whatever comes your way.",
+"Connect with your spiritual or religious beliefs through regular practices like meditation to find inner peace and clarity.",
+"Share your time, attention, and resources with others to spread kindness and make a positive impact.",
+"Show respect to your teachers, parents, and elders in your daily interactions.",
+"Show love and compassion in your relationships to create a supportive and nurturing environment.",
+"Be honest and speak kindly to others, avoiding gossip or negative talk.",
+"Stay determined and focused on your goals, even when faced with challenges.",
+"Stay humble and avoid letting pride or selfishness cloud your judgment.",
+"Practice patience and avoid reacting angrily in frustrating situations.",
+"Practice moderation in your diet, exercise, and other activities to maintain balance in your life.",
+"Be content with what you have and avoid comparing yourself to others.",
+"Be genuine and honest in your interactions, avoiding deceitful behavior.",
+"Keep your surroundings clean and organized to promote a sense of calm and well-being.",
+"Surround yourself with positive and supportive people who encourage your growth and well-being",
+            };
+
+            return quotes.OrderBy(q => _rand.Next()).First();
+        }
+
         public static List<Dosha> GetDoshas(bool includeTraits = true)
         {
             var doshas = new List<Dosha>()
