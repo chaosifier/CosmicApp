@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Cosmic.Views.TimerPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:converter="clr-namespace:Cosmic.Converter"
+    Title="TM Timer">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converter:NegateConverter x:Key="NegateConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout Margin="15" HorizontalOptions="FillAndExpand">
+            <Label
+                FontSize="30"
+                HorizontalOptions="CenterAndExpand"
+                Text="Time your TM session"
+                TextColor="Black" />
+
+            <StackLayout Margin="0,15,0,0" HorizontalOptions="FillAndExpand">
+                <StackLayout HorizontalOptions="FillAndExpand" IsVisible="{Binding IsRunning, Converter={StaticResource NegateConverter}}">
+                    <Label Text="Enter the duration in minutes for how long you want to meditate" />
+                    <Entry
+                        FontSize="25"
+                        Placeholder="Enter duration"
+                        Text="{Binding DurationInMinutes, Mode=TwoWay}" />
+                </StackLayout>
+
+                <Label
+                    FontSize="70"
+                    HorizontalOptions="CenterAndExpand"
+                    IsVisible="{Binding IsRunning}"
+                    Text="{Binding ElapsedTimeInSecs}"
+                    TextColor="Black"
+                    VerticalOptions="CenterAndExpand" />
+
+                <Button
+                    BackgroundColor="Orange"
+                    Command="{Binding StartStopCommand}"
+                    CornerRadius="75"
+                    FontSize="30"
+                    HeightRequest="150"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="{Binding ButtonText}"
+                    TextColor="Black"
+                    VerticalOptions="CenterAndExpand"
+                    WidthRequest="150" />
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

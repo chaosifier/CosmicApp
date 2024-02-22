@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Cosmic.Views.BaseQuizPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:converter="clr-namespace:Cosmic.Converter"
+    Title="Dosha Quiz">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converter:NegateConverter x:Key="NegateConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <StackLayout
+                Margin="15"
+                IsVisible="{Binding ShowResult, Converter={StaticResource NegateConverter}}"
+                VerticalOptions="FillAndExpand">
+                <Label HorizontalOptions="EndAndExpand">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="{Binding CurrentQuestionNo}" />
+                            <Span Text=" of " />
+                            <Span Text="{Binding AllQuestions.Count}" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label
+                    FontAttributes="Bold"
+                    FontSize="35"
+                    HorizontalOptions="StartAndExpand"
+                    Text="{Binding CurrentQuestion.Question}"
+                    TextColor="Black"
+                    VerticalOptions="Start" />
+
+                <StackLayout
+                    Margin="0,15"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="Start">
+                    <Slider
+                        HorizontalOptions="FillAndExpand"
+                        Maximum="100"
+                        MaximumTrackColor="Purple"
+                        Minimum="0"
+                        MinimumTrackColor="Orange"
+                        Value="{Binding CurrentQuestion.Answer, Mode=TwoWay}" />
+                    <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+                        <Label
+                            FontAttributes="Italic"
+                            HorizontalOptions="Start"
+                            HorizontalTextAlignment="Start"
+                            Text="Strongly Disagree" />
+                        <Label
+                            FontAttributes="Italic"
+                            HorizontalOptions="EndAndExpand"
+                            HorizontalTextAlignment="End"
+                            Text="Strongly Agree" />
+                    </StackLayout>
+                </StackLayout>
+                <!--<Label
+                    FontSize="30"
+                    Text="{Binding CurrentQuestion.Answer}"
+                    TextColor="Black" />-->
+                <Button
+                    Margin="0,15,0,0"
+                    BackgroundColor="Green"
+                    Command="{Binding OpenNextQuestion}"
+                    FontSize="20"
+                    HorizontalOptions="End"
+                    Text="{Binding ButtonText}"
+                    TextColor="White"
+                    VerticalOptions="EndAndExpand" />
+            </StackLayout>
+            <StackLayout
+                Margin="15"
+                IsVisible="{Binding ShowResult}"
+                Spacing="30">
+                <Label
+                    FontAttributes="Bold"
+                    FontSize="40"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="Your Result"
+                    TextColor="Black"
+                    VerticalOptions="Start" />
+                <StackLayout HorizontalOptions="FillAndExpand" Spacing="15">
+                    <Frame
+                        Padding="0"
+                        BorderColor="Purple"
+                        CornerRadius="10"
+                        HorizontalOptions="FillAndExpand">
+                        <Grid ColumnDefinitions=".5*, .5*" HorizontalOptions="FillAndExpand">
+                            <ContentView
+                                Grid.Column="0"
+                                Padding="10"
+                                BackgroundColor="Purple"
+                                HorizontalOptions="FillAndExpand"
+                                VerticalOptions="FillAndExpand">
+                                <Label
+                                    FontSize="50"
+                                    HorizontalOptions="Center"
+                                    HorizontalTextAlignment="Center"
+                                    Text="{Binding Result.VataResult, StringFormat='{}{0:#,0}%'}"
+                                    TextColor="White"
+                                    VerticalOptions="Center"
+                                    VerticalTextAlignment="Center" />
+                            </ContentView>
+                            <ContentView Grid.Column="1">
+                                <Label
+                                    FontSize="30"
+                                    HorizontalOptions="CenterAndExpand"
+                                    Text="Vata"
+                                    TextColor="Purple"
+                                    VerticalOptions="CenterAndExpand"
+                                    VerticalTextAlignment="Center" />
+                            </ContentView>
+                        </Grid>
+                    </Frame>
+
+                    <Frame
+                        Padding="0"
+                        BorderColor="Orange"
+                        CornerRadius="10"
+                        HorizontalOptions="FillAndExpand">
+                        <Grid ColumnDefinitions=".5*, .5*" HorizontalOptions="FillAndExpand">
+                            <ContentView
+                                Grid.Column="0"
+                                Padding="10"
+                                BackgroundColor="Orange"
+                                HorizontalOptions="FillAndExpand"
+                                VerticalOptions="FillAndExpand">
+                                <Label
+                                    FontSize="50"
+                                    HorizontalOptions="Center"
+                                    HorizontalTextAlignment="Center"
+                                    Text="{Binding Result.PitaResult, StringFormat='{}{0:#,0}%'}"
+                                    TextColor="White"
+                                    VerticalOptions="Center"
+                                    VerticalTextAlignment="Center" />
+                            </ContentView>
+                            <ContentView Grid.Column="1">
+                                <Label
+                                    FontSize="30"
+                                    HorizontalOptions="CenterAndExpand"
+                                    Text="Pita"
+                                    TextColor="Orange"
+                                    VerticalOptions="CenterAndExpand"
+                                    VerticalTextAlignment="Center" />
+                            </ContentView>
+                        </Grid>
+                    </Frame>
+
+                    <Frame
+                        Padding="0"
+                        BorderColor="Green"
+                        CornerRadius="10"
+                        HorizontalOptions="FillAndExpand">
+                        <Grid ColumnDefinitions=".5*, .5*" HorizontalOptions="FillAndExpand">
+                            <ContentView
+                                Grid.Column="0"
+                                Padding="10"
+                                BackgroundColor="Green"
+                                HorizontalOptions="FillAndExpand"
+                                VerticalOptions="FillAndExpand">
+                                <Label
+                                    FontSize="50"
+                                    HorizontalOptions="Center"
+                                    HorizontalTextAlignment="Center"
+                                    Text="{Binding Result.KafaResult, StringFormat='{}{0:#,0}%'}"
+                                    TextColor="White"
+                                    VerticalOptions="Center"
+                                    VerticalTextAlignment="Center" />
+                            </ContentView>
+                            <ContentView Grid.Column="1">
+                                <Label
+                                    FontSize="30"
+                                    HorizontalOptions="CenterAndExpand"
+                                    Text="Kafa"
+                                    TextColor="Green"
+                                    VerticalOptions="CenterAndExpand"
+                                    VerticalTextAlignment="Center" />
+                            </ContentView>
+                        </Grid>
+                    </Frame>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

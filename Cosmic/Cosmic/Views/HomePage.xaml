@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Cosmic.Views.HomePage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <ContentPage.Content>
+        <StackLayout
+            Margin="15"
+            HorizontalOptions="FillAndExpand"
+            Spacing="15">
+            <Label
+                FontAttributes="Bold"
+                FontSize="32"
+                HorizontalOptions="CenterAndExpand"
+                HorizontalTextAlignment="Center"
+                Text="Cosmic App"
+                TextColor="#8aa771" />
+            <Button
+                BackgroundColor="Orange"
+                Command="{Binding OpenBaseQuizCommand}"
+                CornerRadius="10"
+                FontSize="30"
+                HeightRequest="200"
+                HorizontalOptions="FillAndExpand"
+                Text="What is my Dosha?" />
+            <Button
+                BackgroundColor="Purple"
+                Command="{Binding OpenTimerPageCommand}"
+                CornerRadius="10"
+                FontSize="30"
+                HeightRequest="200"
+                HorizontalOptions="FillAndExpand"
+                Text="TM Timer" />
+            <Button
+                BackgroundColor="Green"
+                Command="{Binding OpenLearnMorePageCommand}"
+                CornerRadius="10"
+                FontSize="30"
+                HeightRequest="200"
+                HorizontalOptions="FillAndExpand"
+                Text="Tips" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

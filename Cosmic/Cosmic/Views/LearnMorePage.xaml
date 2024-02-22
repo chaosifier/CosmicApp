@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Cosmic.Views.LearnMorePage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Learn More">
+    <ContentPage.Content>
+        <ScrollView
+            Padding="0,0,0,15"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand">
+            <StackLayout
+                Margin="15"
+                BindableLayout.ItemsSource="{Binding Doshas}"
+                HorizontalOptions="FillAndExpand"
+                Spacing="30">
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate>
+                        <ContentView HorizontalOptions="FillAndExpand">
+                            <Frame
+                                Padding="0"
+                                BorderColor="{Binding Color}"
+                                CornerRadius="10">
+                                <StackLayout
+                                    Margin="0,0,0,25"
+                                    HorizontalOptions="FillAndExpand"
+                                    Spacing="15">
+                                    <Frame BackgroundColor="{Binding Color}" HorizontalOptions="FillAndExpand">
+                                        <Label
+                                            FontAttributes="Bold"
+                                            FontSize="40"
+                                            Text="{Binding DoshaName}"
+                                            TextColor="White" />
+                                    </Frame>
+
+                                    <StackLayout Padding="15,0,15,0" HorizontalOptions="FillAndExpand">
+                                        <Label
+                                            FontAttributes="Bold"
+                                            FontSize="20"
+                                            Text="Balance"
+                                            TextColor="{Binding Color}" />
+                                        <StackLayout BindableLayout.ItemsSource="{Binding InBalanceTraits}" HorizontalOptions="FillAndExpand">
+                                            <BindableLayout.ItemTemplate>
+                                                <DataTemplate>
+                                                    <Label
+                                                        FontSize="18"
+                                                        Text="{Binding ., StringFormat='- {0}'}"
+                                                        TextColor="Black" />
+                                                </DataTemplate>
+                                            </BindableLayout.ItemTemplate>
+                                        </StackLayout>
+
+
+                                        <Label
+                                            Margin="0,15,0,0"
+                                            FontAttributes="Bold"
+                                            FontSize="20"
+                                            Text="Out of balance"
+                                            TextColor="{Binding Color}" />
+                                        <StackLayout BindableLayout.ItemsSource="{Binding OutOfBalanceTraits}" HorizontalOptions="FillAndExpand">
+                                            <BindableLayout.ItemTemplate>
+                                                <DataTemplate>
+                                                    <Label
+                                                        FontSize="18"
+                                                        Text="{Binding ., StringFormat='- {0}'}"
+                                                        TextColor="Black" />
+                                                </DataTemplate>
+                                            </BindableLayout.ItemTemplate>
+                                        </StackLayout>
+                                    </StackLayout>
+
+                                </StackLayout>
+                            </Frame>
+                        </ContentView>
+
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>
+            </StackLayout>
+        </ScrollView>
+
+    </ContentPage.Content>
+</ContentPage>
