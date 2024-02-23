@@ -18,7 +18,7 @@ namespace Cosmic
         {
             var allDoshas = GetDoshas();
             var vataDosha = allDoshas.Single(d => d.Key == "vata");
-            var pittaDosha = allDoshas.Single(d => d.Key == "pitta");
+            var pitaDosha = allDoshas.Single(d => d.Key == "pita");
             var kaphaDosha = allDoshas.Single(d => d.Key == "kapha");
 
             var questions = new List<DoshaQuestion>()
@@ -29,11 +29,11 @@ namespace Cosmic
                 new DoshaQuestion(4, vataDosha, "I tend to speak quickly and fluently."),
                 new DoshaQuestion(5, vataDosha, "I experience waves of abundant energy throughout the day."),
 
-                new DoshaQuestion(6, pittaDosha, "I have a sharp intellect and a driven, passionate personality."),
-                new DoshaQuestion(7, pittaDosha, "I feel compelled to tackle challenging tasks."),
-                new DoshaQuestion(8, pittaDosha, "I prefer to follow my own ideas and can be stubborn at times."),
-                new DoshaQuestion(9, pittaDosha, "I hold myself and others to high standards."),
-                new DoshaQuestion(10, pittaDosha, "Very spicy or hot foods tend to upset my stomach, which tends to be acidic."),
+                new DoshaQuestion(6, pitaDosha, "I have a sharp intellect and a driven, passionate personality."),
+                new DoshaQuestion(7, pitaDosha, "I feel compelled to tackle challenging tasks."),
+                new DoshaQuestion(8, pitaDosha, "I prefer to follow my own ideas and can be stubborn at times."),
+                new DoshaQuestion(9, pitaDosha, "I hold myself and others to high standards."),
+                new DoshaQuestion(10, pitaDosha, "Very spicy or hot foods tend to upset my stomach, which tends to be acidic."),
 
                 new DoshaQuestion(11, kaphaDosha, "Others often describe me as easy - going, loyal, loving, and compassionate."),
                 new DoshaQuestion(12, kaphaDosha, "I tend to move at a slow, steady pace."),
@@ -102,8 +102,8 @@ namespace Cosmic
                 },
                 new Dosha()
                 {
-                    DoshaName = "Pitta",
-                    Key = "pitta",
+                    DoshaName = "Pita",
+                    Key = "pita",
                     Color = Color.Orange,
                     InBalanceTraits = new List<string>
                     {

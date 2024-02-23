@@ -38,10 +38,10 @@ namespace Cosmic.Model
 
     public class DoshaResult : ObservableBase
     {
-        public DoshaResult(decimal vata, decimal pitta, decimal kapha)
+        public DoshaResult(decimal vata, decimal pita, decimal kapha)
         {
             VataResult = vata;
-            PittaResult = pitta;
+            PitaResult = pita;
             KaphaResult = kapha;
         }
 
@@ -52,11 +52,11 @@ namespace Cosmic.Model
             set { SetProperty(ref _vataResult, value); }
         }
 
-        private decimal _pittaResult;
-        public decimal PittaResult
+        private decimal _pitaResult;
+        public decimal PitaResult
         {
-            get { return _pittaResult; }
-            set { SetProperty(ref _pittaResult, value); }
+            get { return _pitaResult; }
+            set { SetProperty(ref _pitaResult, value); }
         }
 
         private decimal _kaphaResult;

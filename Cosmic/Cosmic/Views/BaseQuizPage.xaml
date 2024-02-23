@@ -166,7 +166,7 @@
                                     FontSize="50"
                                     HorizontalOptions="Center"
                                     HorizontalTextAlignment="Center"
-                                    Text="{Binding Result.KafaResult, StringFormat='{}{0:#,0}%'}"
+                                    Text="{Binding Result.KaphaResult, StringFormat='{}{0:#,0}%'}"
                                     TextColor="White"
                                     VerticalOptions="Center"
                                     VerticalTextAlignment="Center" />
@@ -175,7 +175,7 @@
                                 <Label
                                     FontSize="30"
                                     HorizontalOptions="CenterAndExpand"
-                                    Text="Kafa"
+                                    Text="Kapha"
                                     TextColor="Green"
                                     VerticalOptions="CenterAndExpand"
                                     VerticalTextAlignment="Center" />
