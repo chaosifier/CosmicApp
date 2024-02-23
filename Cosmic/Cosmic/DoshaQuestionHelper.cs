@@ -18,8 +18,8 @@ namespace Cosmic
         {
             var allDoshas = GetDoshas();
             var vataDosha = allDoshas.Single(d => d.Key == "vata");
-            var pitaDosha = allDoshas.Single(d => d.Key == "pita");
-            var kafaDosha = allDoshas.Single(d => d.Key == "kafa");
+            var pittaDosha = allDoshas.Single(d => d.Key == "pitta");
+            var kaphaDosha = allDoshas.Single(d => d.Key == "kapha");
 
             var questions = new List<DoshaQuestion>()
             {
@@ -29,17 +29,17 @@ namespace Cosmic
                 new DoshaQuestion(4, vataDosha, "I tend to speak quickly and fluently."),
                 new DoshaQuestion(5, vataDosha, "I experience waves of abundant energy throughout the day."),
 
-                new DoshaQuestion(6, pitaDosha, "I have a sharp intellect and a driven, passionate personality."),
-                new DoshaQuestion(7, pitaDosha, "I feel compelled to tackle challenging tasks."),
-                new DoshaQuestion(8, pitaDosha, "I prefer to follow my own ideas and can be stubborn at times."),
-                new DoshaQuestion(9, pitaDosha, "I hold myself and others to high standards."),
-                new DoshaQuestion(10, pitaDosha, "Very spicy or hot foods tend to upset my stomach, which tends to be acidic."),
+                new DoshaQuestion(6, pittaDosha, "I have a sharp intellect and a driven, passionate personality."),
+                new DoshaQuestion(7, pittaDosha, "I feel compelled to tackle challenging tasks."),
+                new DoshaQuestion(8, pittaDosha, "I prefer to follow my own ideas and can be stubborn at times."),
+                new DoshaQuestion(9, pittaDosha, "I hold myself and others to high standards."),
+                new DoshaQuestion(10, pittaDosha, "Very spicy or hot foods tend to upset my stomach, which tends to be acidic."),
 
-                new DoshaQuestion(11, kafaDosha, "Others often describe me as easy - going, loyal, loving, and compassionate."),
-                new DoshaQuestion(12, kafaDosha, "I tend to move at a slow, steady pace."),
-                new DoshaQuestion(13, kafaDosha, "I prefer to follow my own ideas and can be stubborn at times."),
-                new DoshaQuestion(14, kafaDosha, "I find it easy to gain weight and difficult to lose it."),
-                new DoshaQuestion(15, kafaDosha, "I may take longer to grasp new concepts, but I have excellent long-term memory retention.")
+                new DoshaQuestion(11, kaphaDosha, "Others often describe me as easy - going, loyal, loving, and compassionate."),
+                new DoshaQuestion(12, kaphaDosha, "I tend to move at a slow, steady pace."),
+                new DoshaQuestion(13, kaphaDosha, "I struggle with oversleeping and often feel groggy upon waking."),
+                new DoshaQuestion(14, kaphaDosha, "I find it easy to gain weight and difficult to lose it."),
+                new DoshaQuestion(15, kaphaDosha, "I may take longer to grasp new concepts, but I have excellent long-term memory retention.")
             };
 
             questions = questions.OrderBy(q => _rand.Next()).ToList();
@@ -102,8 +102,8 @@ namespace Cosmic
                 },
                 new Dosha()
                 {
-                    DoshaName = "Pita",
-                    Key = "pita",
+                    DoshaName = "Pitta",
+                    Key = "pitta",
                     Color = Color.Orange,
                     InBalanceTraits = new List<string>
                     {
@@ -126,8 +126,8 @@ namespace Cosmic
                 },
                  new Dosha()
                 {
-                    DoshaName = "Kafa",
-                    Key = "kafa",
+                    DoshaName = "Kapha",
+                    Key = "kapha",
                     Color = Color.Green,
                     InBalanceTraits = new List<string>
                     {

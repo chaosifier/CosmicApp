@@ -2732,8 +2732,8 @@ namespace Cosmic.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.String.abc_action_mode_done = global::Cosmic.Droid.Resource.String.abc_action_mode_done;
 			global::Xamarin.Forms.Platform.Android.Resource.String.abc_activitychooserview_choose_application = global::Cosmic.Droid.Resource.String.abc_activitychooserview_choose_application;
 			global::Xamarin.Forms.Platform.Android.Resource.String.abc_activity_chooser_view_see_all = global::Cosmic.Droid.Resource.String.abc_activity_chooser_view_see_all;
-			global::Xamarin.Forms.Platform.Android.Resource.String.abc_capital_off = global::Cosmic.Droid.Resource.String.abc_capital_off;
-			global::Xamarin.Forms.Platform.Android.Resource.String.abc_capital_on = global::Cosmic.Droid.Resource.String.abc_capital_on;
+			global::Xamarin.Forms.Platform.Android.Resource.String.abc_capittal_off = global::Cosmic.Droid.Resource.String.abc_capittal_off;
+			global::Xamarin.Forms.Platform.Android.Resource.String.abc_capittal_on = global::Cosmic.Droid.Resource.String.abc_capittal_on;
 			global::Xamarin.Forms.Platform.Android.Resource.String.abc_menu_alt_shortcut_label = global::Cosmic.Droid.Resource.String.abc_menu_alt_shortcut_label;
 			global::Xamarin.Forms.Platform.Android.Resource.String.abc_menu_ctrl_shortcut_label = global::Cosmic.Droid.Resource.String.abc_menu_ctrl_shortcut_label;
 			global::Xamarin.Forms.Platform.Android.Resource.String.abc_menu_delete_shortcut_label = global::Cosmic.Droid.Resource.String.abc_menu_delete_shortcut_label;
@@ -8019,8 +8019,8 @@ namespace Cosmic.Droid
 			global::Xamarin.Forms.Platform.Resource.String.abc_action_mode_done = global::Cosmic.Droid.Resource.String.abc_action_mode_done;
 			global::Xamarin.Forms.Platform.Resource.String.abc_activitychooserview_choose_application = global::Cosmic.Droid.Resource.String.abc_activitychooserview_choose_application;
 			global::Xamarin.Forms.Platform.Resource.String.abc_activity_chooser_view_see_all = global::Cosmic.Droid.Resource.String.abc_activity_chooser_view_see_all;
-			global::Xamarin.Forms.Platform.Resource.String.abc_capital_off = global::Cosmic.Droid.Resource.String.abc_capital_off;
-			global::Xamarin.Forms.Platform.Resource.String.abc_capital_on = global::Cosmic.Droid.Resource.String.abc_capital_on;
+			global::Xamarin.Forms.Platform.Resource.String.abc_capittal_off = global::Cosmic.Droid.Resource.String.abc_capittal_off;
+			global::Xamarin.Forms.Platform.Resource.String.abc_capittal_on = global::Cosmic.Droid.Resource.String.abc_capittal_on;
 			global::Xamarin.Forms.Platform.Resource.String.abc_menu_alt_shortcut_label = global::Cosmic.Droid.Resource.String.abc_menu_alt_shortcut_label;
 			global::Xamarin.Forms.Platform.Resource.String.abc_menu_ctrl_shortcut_label = global::Cosmic.Droid.Resource.String.abc_menu_ctrl_shortcut_label;
 			global::Xamarin.Forms.Platform.Resource.String.abc_menu_delete_shortcut_label = global::Cosmic.Droid.Resource.String.abc_menu_delete_shortcut_label;
@@ -18846,10 +18846,10 @@ namespace Cosmic.Droid
 			public const int abc_activity_chooser_view_see_all = 2131623940;
 			
 			// aapt resource value: 0x7F0E0006
-			public const int abc_capital_off = 2131623942;
+			public const int abc_capittal_off = 2131623942;
 			
 			// aapt resource value: 0x7F0E0007
-			public const int abc_capital_on = 2131623943;
+			public const int abc_capittal_on = 2131623943;
 			
 			// aapt resource value: 0x7F0E0008
 			public const int abc_menu_alt_shortcut_label = 2131623944;

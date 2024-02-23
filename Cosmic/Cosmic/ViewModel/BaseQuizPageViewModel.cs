@@ -57,14 +57,14 @@ namespace Cosmic.ViewModel
             set { SetProperty(ref _showResult, value); }
         }
 
-        private DoshaResult getResult(decimal vataPercent, decimal pitaPercent, decimal kafaPercent)
+        private DoshaResult getResult(decimal vataPercent, decimal pittaPercent, decimal kaphaPercent)
         {
-            var sum = vataPercent + pitaPercent + kafaPercent;
+            var sum = vataPercent + pittaPercent + kaphaPercent;
             var vataResult = sum <= 0 ? 0 : (vataPercent / sum * 100);
-            var pitaResult = sum <= 0 ? 0 : (pitaPercent / sum * 100);
-            var kafaResult = sum <= 0 ? 0 : (kafaPercent / sum * 100);
+            var pittaResult = sum <= 0 ? 0 : (pittaPercent / sum * 100);
+            var kaphaResult = sum <= 0 ? 0 : (kaphaPercent / sum * 100);
 
-            return new DoshaResult(vataResult, pitaResult, kafaResult);
+            return new DoshaResult(vataResult, pittaResult, kaphaResult);
         }
 
         public BaseQuizPageViewModel()
@@ -89,10 +89,10 @@ namespace Cosmic.ViewModel
                     });
 
                     var vataPercent = doshaGroups.Single(d => d.Key == "vata").Percent;
-                    var pitaPercent = doshaGroups.Single(d => d.Key == "pita").Percent;
-                    var kafaPercent = doshaGroups.Single(d => d.Key == "kafa").Percent;
+                    var pittaPercent = doshaGroups.Single(d => d.Key == "pitta").Percent;
+                    var kaphaPercent = doshaGroups.Single(d => d.Key == "kapha").Percent;
 
-                    Result = getResult(vataPercent, pitaPercent, kafaPercent);
+                    Result = getResult(vataPercent, pittaPercent, kaphaPercent);
                     ShowResult = true;
                 }
                 else
